@@ -1,16 +1,19 @@
 window.onload = function () {
     if (location.href.indexOf("active") == -1) {
-        location.href = location.href+'?active=11';
+        location.href = location.href+'?active=10';
     }
     var params_arr = location.href.split('?');
     var active_num = Number(params_arr[1].split('=')[1]);
 
     switch ( active_num ) {
-        case 11:
+        case 10:
             $('#left01').elements[0].className = "active";
         break;
-        case 12:
+        case 11:
             $('#left02').elements[0].className = "active";
+        break;
+        case 12:
+            $('#left03').elements[0].className = "active";
         break;
         case 13:
             $('#container01').elements[0].className = "active";
@@ -80,6 +83,10 @@ function topKeyDown () {
         $("#left02").elements[0].className = "";
         $("#left01").elements[0].className = "active";
     } else
+    if ( $("#left03").hasClass("active") ) {
+        $("#left03").elements[0].className = "";
+        $("#left02").elements[0].className = "active";
+    } else
     if ( $("#container01").hasClass("active") ) {
         $("#container01").elements[0].className = "";
         $(".logout").elements[0].className = "logout focus";
@@ -98,7 +105,7 @@ function topKeyDown () {
     } else
     if ( $("#bottom01").hasClass("active") ) {
         $("#bottom01").elements[0].className = "";
-        $("#left02").elements[0].className = "active";
+        $("#left03").elements[0].className = "active";
     } else 
     if ( $("#bottom02").hasClass("active") ) {
         $("#bottom02").elements[0].className = "";
@@ -129,9 +136,13 @@ function downKeyDown () {
     if ( $("#left01").hasClass("active") ) {
         $("#left01").elements[0].className = "";
         $("#left02").elements[0].className = "active";
-    } else 
+    } else
     if ( $("#left02").hasClass("active") ) {
         $("#left02").elements[0].className = "";
+        $("#left03").elements[0].className = "active";
+    } else 
+    if ( $("#left03").hasClass("active") ) {
+        $("#left03").elements[0].className = "";
         $("#bottom01").elements[0].className = "active";
     } else 
     if ( $("#container01").hasClass("active") ) {
@@ -172,15 +183,6 @@ function leftKeyDown () {
         $(".logout").elements[0].className = "logout focus";
     } else {
         var $num = $(".active").attr("data-num");
-        if ( $("#container01").hasClass("active") ) {
-            var dataNum = $("#container01").attr("data-num");
-            $("#container01").elements[0].className = "";
-            if ( dataNum == 2 ) {
-                $("#left02").elements[0].className = "active";
-            } else {
-                $("#left01").elements[0].className = "active";
-            }
-        } else
         if ( $("#right01").hasClass("active") ) {
             $("#container01").attr("data-num",$num);
             $("#right01").elements[0].className = "";
@@ -195,7 +197,16 @@ function leftKeyDown () {
             $("#container01").attr("data-num",$num);
             $("#right03").elements[0].className = "";
             $("#container01").elements[0].className = "active";
-        }
+        }else
+        if ( $("#container01").hasClass("active") ) {
+            var dataNum = $("#container01").attr("data-num");
+            $("#container01").elements[0].className = "";
+            if ( dataNum == 2 ) {
+                $("#left02").elements[0].className = "active";
+            } else {
+                $("#left01").elements[0].className = "active";
+            }
+        } else
         if ( $("#bottom02").hasClass("active") ) {
             $("#bottom02").elements[0].className = "";
             $("#bottom01").elements[0].className = "active";
@@ -242,16 +253,25 @@ function rightKeyDown () {
             $("#left02").elements[0].className = "";
             $("#container01").elements[0].className = "active";
         } else
+
+        if ( $("#left03").hasClass("active") ) {
+            $("#container01").attr("data-num",$num);
+            $("#left03").elements[0].className = "";
+            $("#container01").elements[0].className = "active";
+        } else
+
         if ( $("#container01").hasClass("active") ) {
             var dataNum = $("#container01").attr("data-num");
             $("#container01").elements[0].className = "";
-            if ( dataNum == 0 || dataNum == 2 ) {
+            if ( dataNum == 0) {
                 $("#right01").elements[0].className = "active";
             } else
             if ( dataNum == 1 ) {
+                $("#right02").elements[0].className = "active";
+            } 
+            else 
+            if( dataNum == 2){
                 $("#right03").elements[0].className = "active";
-            } else {
-                $("#right01").elements[0].className = "active";
             }
         } else
         if ( $("#bottom01").hasClass("active") ) {
