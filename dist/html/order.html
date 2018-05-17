@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品订购页</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/component/order.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="loading">
+            <div class="load"></div>
+        </div>
+        <div id="inner" class=''>
+            <div class="header">
+                <p class="log_out">
+                    <span class="out_name">退出</span>
+                    <span class='function'></span>
+                </p>
+                <p class="title">产品订购</p>
+            </div>
+            <div class="content">
+                <!-- <div class="list year" style='background-image:url(../images/home/order/order_mon.png);color: #0F98FF'>
+                    <p class="title">
+                        我是标题
+                    </p>
+                    <p class="price">
+                        <span class="price_num" style='color: #0F98FF'>￥天价</span>元/月
+                    </p>
+                    <p class="information">
+                        说明：您即将订购的节目是
+                        <span class='program' style='color: #0F98FF'>《东方有线》</span>栏目，订购成功后可以在规定时间内观看该栏目下的所有视频节目。
+                    </p>
+                    <p class="confirm"></p>
+                </div>
+                <div class="list year" style='background-image:url(../images/home/order/order_year.png);color: #00CF9B'>
+                    <p class="title">
+                        我是标题
+                    </p>
+                    <p class="price">
+                        <span class="price_num" style='color: #01CE9B'>￥天价</span>元/年
+                    </p>
+                    <p class="information">
+                        说明：您即将订购的节目是
+                        <span class='program' style='color: #01CE9B'>《东方有线》</span>栏目，订购成功后可以在规定时间内观看该栏目下的所有视频节目。
+                    </p>
+                    <p class="confirm"></p>
+                </div> -->
+            </div>
+            <!-- 弹框 -->
+            <div class="alert alert_success" style='background-image: url(../images/home/order/success.png)'>
+                <p class="alert_message">产品订购成功。</p>
+                <p class="alert_message" style='font-size: 26px;text-align: left;top: 58%;line-height: 26px;'>系统正在给机顶盒发送授权，请耐心等待2分钟。</p>
+            </div>
+            <div class="alert alert_warnning" style='background-image: url(../images/home/order/warnning.png)'>
+                <p class="alert_message">该视频正在准备中，给您带来不便敬请谅解。</p>
+            </div>
+            <div class="alert alert_fail" style='background-image: url(../images/home/order/failure.png)'>
+                <p class="alert_message">产品订购失败，请重新订购。</p>
+            </div>
+        </div>
+    </div>
+    <script src="../public/ajaxSetup.js"></script>
+    <script src="../public/CommonMethods.js"></script>
+    <script src="../js/edu/order.js"></script>
+    <script>
+        window.onload = function () {
+            // 可订购接口
+            var $can_be_ordered = _IP + "online_order";
+            var href = window.location.href;
+            var params = href.slice(href.indexOf('?')).slice(1).split("&");
+            var data = {};
+            for (var i = 0; i < params.length; i++) {
+                var arr = params[i].split('=');
+                data[arr[0]] = arr[1];
+            }   
+            var mac = data.mac;  // window.location.href里的mac字段
+            var code = data.server_code;  // window.location.href里的server_code字段
+            var prodinstid = "16906239570";
+            ajax({
+                type: 'get',
+                url: $can_be_ordered,
+                data: {
+                    mac: mac,
+                    server_code: code
+                },
+                success: function (data) {
+                    var data = data.data.planProductInfos["item"];
+                    var _html = "";
+                    for (var i = 0; i < data.length; i++) {
+                        _html +=
+                            "<div class='list month' style='background-image:url(../images/home/order/order_1.png);color: #0F99FE'>" +
+                                "<p class='title'>" +data[i].offerName +"</p>" +
+                                "<p class='price'>" +
+                                    "<span class='dollar' style='color: #0F98FF'>￥</span>" +
+                                    "<span class='price_num' style='color: #0F98FF'>" + data[i].offerPrice +"</span>" +
+                                "</p>" +
+                                "<p class='information'>" +
+                                    "说明：您即将订购的节目是" +
+                                    "<span class='program'>" + data[i].offerName +
+                                    "</span>栏目，订购成功后可以在规定时间内观看该栏目下的所有视频节目。" +
+                                "</p>" +
+                                "<p class='confirm active' data-mac='" + mac + "' data-prodinstid='" + data[i].prodInstID +"' data-offerid='" + data[i].offerId + "'></p>" +
+                            "</div>";
+                    }
+                    $('.content').elements[0].innerHTML = _html;
+                },
+                beforeSend: function(){
+                    $(".loading").elements[0].className = "loading loadingActive";
+                },
+                complete: function() {
+                    setTimeout(function(){
+                        $(".loading").elements[0].className = "loading";
+                    },8000);
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

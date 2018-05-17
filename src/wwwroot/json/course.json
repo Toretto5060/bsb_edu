@@ -1,0 +1,60 @@
+{
+  "status": 1,
+  "message": "获取成功",
+  "data": [
+    {
+      "id": 1,
+      "file_id": 1,
+      "category_id": 24,
+      "subject_id": 1,
+      "subject_name": "语文",
+      "category_name": "第一学期",
+      "path": "../images/edu/swiper/school/pic_chinese.png"
+    },
+    {
+      "id": 4,
+      "file_id": 0,
+      "category_id": 25,
+      "subject_id": 1,
+      "subject_name": "语文",
+      "category_name": "第二学期",
+      "path": "../images/edu/swiper/school/pic_chinese.png"
+    },
+    {
+      "id": 2,
+      "file_id": 0,
+      "category_id": 24,
+      "subject_id": 2,
+      "subject_name": "数学",
+      "category_name": "第一学期",
+      "path": "../images/edu/swiper/school/math1_1.png"
+    },
+    {
+      "id": 5,
+      "file_id": 0,
+      "category_id": 25,
+      "subject_id": 2,
+      "subject_name": "数学",
+      "category_name": "第二学期",
+      "path": "../images/edu/swiper/school/math1_2.png"
+    },
+    {
+      "id": 3,
+      "file_id": 0,
+      "category_id": 24,
+      "subject_id": 3,
+      "subject_name": "英语",
+      "category_name": "第一学期",
+      "path": "../images/edu/swiper/school/pic_eng.png"
+    },
+    {
+      "id": 6,
+      "file_id": 0,
+      "category_id": 25,
+      "subject_id": 3,
+      "subject_name": "英语",
+      "category_name": "第二学期",
+      "path": "../images/edu/swiper/school/pic_eng.png"
+    }
+  ]
+}

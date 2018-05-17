@@ -1,0 +1,40 @@
+html{ height: 100%; }
+body{
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  user-select: none;
+}
+h1, h2, h3, ul, ol, li, menu{
+  cursor: default;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+p{
+  cursor: default;
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: #000;
+  text-decoration: none;
+}
+video{
+  display: block;
+}
+audio{
+  display: none;
+}
+*{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+button, input{
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+}

@@ -1,0 +1,104 @@
+@import './container.scss';
+@import './header.scss';
+.function {
+    // border: 5px solid #66FFFF;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: {
+        size: 100% 100%;
+        repeat: no-repeat;
+    }
+}
+
+.content {
+    padding: 80px 60px 0;
+    overflow: hidden;
+    position: relative;
+    height: 630px;
+    div {
+        width: 220px;
+        height: 220px;
+        position: absolute;
+        padding-top: 100px;
+        text-align: center;
+        overflow: hidden;
+        color: #fff;
+        background: {
+            size: 100%;
+            repeat: no-repeat;
+        }
+        .title {
+            font: {
+                size: 32px;
+                weight: bold;
+            }
+            line-height: 60px;
+        }
+        .expire_date {
+            font: {
+                size: 20px;
+                weight: bold;
+            }
+        }
+        &.active .function {
+            // border: 5px solid #66FFFF;
+            display: block;
+            // width: 210px;
+            background-image: url(../../images/home/order/select_1.png);
+        }
+        &.school, &.research {
+            margin-left: 0px;
+        }
+        &.school {
+            left: 60px;
+            top: 80px;
+            background-image: url(../../images/home/school.jpg);
+        }
+        &.gk_sprint {
+            left: 290px;
+            top: 80px;
+            background-image: url(../../images/home/gk_sprint.png);
+        }
+        &.zk_sprint {
+            left: 520px;
+            top: 80px;
+            background-image: url(../../images/home/zk_sprint.png);
+        }
+        &.teacher {
+            left: 750px;
+            top: 80px;
+            background-image: url(../../images/home/teacher.png);
+        }
+        &.award {
+            left: 980px;
+            top: 80px;
+            background-image: url(../../images/home/award.png);
+        }
+        &.research {
+            left: 60px;
+            top: 310px;
+            background-image: url(../../images/home/research.png);
+        }
+        &.lower {
+            left: 290px;
+            top: 310px;
+            background-image: url(../../images/home/lower.png);
+        }
+        &.middle {
+            left: 520px;
+            top: 310px;
+            background-image: url(../../images/home/middle.png);
+        }
+        &.high {
+            left: 750px;
+            top: 310px;
+            background-image: url(../../images/home/high.png);
+        }
+    }
+}

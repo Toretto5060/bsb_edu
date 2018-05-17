@@ -1,0 +1,1453 @@
+// 通用样式
+* {
+    box-sizing: border-box;
+}
+html,body,div,ul,li,h1,h2,h3,h4,h5,h6,p,input,button,span,img{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+    font-family: "微软雅黑" ;
+    color: #fff;
+}
+ul,li{
+	list-style: none;
+}
+input{
+	outline: none;
+}
+body{
+	width: 1280px;
+    height: 720px;
+    background-image: url("../../images/home/bg_home.jpg");
+}
+.header{
+    .head{
+        height: 94px;
+    }
+    .stage-title{
+        font-size: 40px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        line-height: 120px;
+        text-shadow: 2px 4px 8px #000;
+        .subject{
+            padding: 0 15px;
+        }
+    }
+    .logoIcon{
+        width: 267px;
+        height: 92px;
+        background: url("../../images/home/logo.png");
+        position: absolute;
+        left: 500px;
+    }
+    .my_order{
+        width: 161px;
+        height: 43px;
+        position: absolute;
+        left: 1050px;
+        top: 40px;
+        &.noselect{
+            background: url('../../images/home/normal.png') no-repeat;
+        }
+        &.selected{
+            background: url('../../images/home/focus.png') no-repeat;
+        }   
+    }
+    .logout{
+        width:97px;
+        height:43px;
+        position: absolute;
+        left: 60px;    
+        top: 40px;
+        &.normal{
+            background:url('../../images/home/btn_nav_fanhui_nor.png') no-repeat;
+        }
+        &.focus{
+            background:url('../../images/home/btn_nav_fanhui_foc.png') no-repeat;
+        }
+        &.pressed{
+            background:url('../../images/home/btn_nav_fanhui_pre.png') no-repeat;
+        }
+    }
+    a{
+        font-size: 28px;
+        position: absolute;
+        display: block;
+        width: 97px;
+        top: 49px;
+        left: 87px;
+        color: #fff;
+    }
+}
+.call{
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+}
+// 首页
+.main{
+    a{
+        display: inline-block;
+        div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            border: 5px solid #56ebfd;
+            // border-radius: 3px;
+            box-shadow: 0 0 16px rgba(0,255,255,.6) inset;
+            display: none;
+        }
+        &.active{
+            div{
+                display: block;
+            }
+        }
+        .histroyTitle{
+            position: absolute;
+            left: 111px;
+            top: 225px;
+            font-size: 22px;
+            width: 160px;
+            height: 33px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+// 排行榜
+.mainRank{
+    li{
+        width: 555px;
+        height: 80px;
+        font-size: 26px;
+        color: #fff;
+        line-height: 78px;
+        padding-left: 30px;
+        margin-bottom: 8px;
+        margin-top: 6px;
+        position: relative;
+        box-sizing: border-box;
+        .liBg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 539px;
+            height: 80px;
+            background: #000;
+            opacity: .2;
+            z-index: -1;
+        }
+        &.active{
+            transform: scale(1.06);
+            .bgfocus{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 539px;
+                height: 80px;
+                z-index: -1;
+                background: #35A3FF;
+            }
+            .border{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 535px;
+                height: 79px;
+                border: 3px solid #0ff;
+                // border-radius: 2px;
+                box-shadow: 0 0 3px 0 #0ff;
+            }
+        }
+        .nodeName{
+            width: 500px;
+            height: 80px;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    .classesFirst{
+        width: 540px;
+        height: 390px;
+        position: absolute;
+        left: 60px;
+        top: 160px;
+        li{
+            .numberOne{
+                position: absolute;
+                top: 20px;
+                left: 12px;
+                width: 40px;
+                height: 40px;
+                background-image: url("../../images/edu/swiper/school/pic_yi.png");
+            }
+            .numberTwo{
+                position: absolute;
+                top: 20px;
+                left: 12px;
+                width: 40px;
+                height: 40px;
+                background-image: url("../../images/edu/swiper/school/pic_er.png");
+            }
+            .numberThree{
+                position: absolute;
+                top: 20px;
+                left: 12px;
+                width: 40px;
+                height: 40px;
+                background-image: url("../../images/edu/swiper/school/pic_san.png");
+            }
+        }
+        
+    }
+    .classesSecond{
+        width: 540px;
+        height: 390px;
+        position: absolute;
+        left: 680px;
+        top: 160px;
+    }
+}
+// 更多课程
+.mainMoreP{
+    .navigate{
+        li{
+            width: 278px;
+            height: 147px;
+            text-align: center;
+            line-height: 147px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            position: relative;
+            // transition: transform .4s;
+            &.focus{
+                // transform: scale(1.1);
+                .border{
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 272px;
+                    height: 147px;
+                    border: 5px solid #0ff;
+                    border-radius: 2px;
+                    box-shadow: 0 0 3px 0 #0ff;
+                }
+            }
+        }
+        #project001{
+            background: url("../../images/edu/swiper/school/pic_more_green.png") no-repeat;
+            position: absolute;
+            left: 60px;
+            top: 120.7px;
+        }
+        #project002{
+            background: url("../../images/edu/swiper/school/pic_more_blue.png") no-repeat;
+            position: absolute;
+            left: 354px;
+            top: 120.7px;
+        }
+        #project003{
+            background: url("../../images/edu/swiper/school/pic_more_yellow.png") no-repeat;
+            position: absolute;
+            left: 648px;
+            top: 120.7px;
+        }
+        #project004{
+            background: url("../../images/edu/swiper/school/pic_more_red.png") no-repeat;
+            position: absolute;
+            left: 942px;
+            top: 120.7px;
+        }
+        #project005{
+            background: url("../../images/edu/swiper/school/pic_more_purple.png") no-repeat;
+            position: absolute;
+            left: 60px;
+            top: 291.3px;
+        }
+        #project006{
+            background: url("../../images/edu/swiper/school/pic_more_red.png") no-repeat;
+            position: absolute;
+            left: 354px;
+            top: 291.3px;
+        }
+        #project007{
+            background: url("../../images/edu/swiper/school/pic_more_blue.png") no-repeat;
+            position: absolute;
+            left: 648px;
+            top: 291.3px;
+        }
+        #project008{
+            background: url("../../images/edu/swiper/school/pic_more_yellow.png") no-repeat;
+            position: absolute;
+            left: 942px;
+            top: 291.3px;
+        }
+        #project009{
+            background: url("../../images/edu/swiper/school/pic_more_red.png") no-repeat;
+            position: absolute;
+            left: 60px;
+            top: 461.9px;
+        }
+        // #project010{
+        //     background: url("../../images/edu/swiper/school/pic_more_green.png") no-repeat;
+        //     position: absolute;
+        //     left: 354px;
+        //     top: 461.9px;
+        // }
+        // #project011{
+        //     background: url("../../images/edu/swiper/school/pic_more_blue.png") no-repeat;
+        //     position: absolute;
+        //     left: 648px;
+        //     top: 461.9px;
+        // }
+        // #project012{
+        //     background: url("../../images/edu/swiper/school/pic_more_red.png") no-repeat;
+        //     position: absolute;
+        //     left: 942px;
+        //     top: 461.9px;
+        // }
+    }
+}
+// 课堂冲刺
+.mainSprint{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 26px;
+    .navBg{
+        position: absolute;
+        left: 60px;
+        top: 120px;
+        width: 1160px;
+        height: 60px;
+        background: #000;
+        opacity: .2;
+        z-index: -1;
+    }
+    .navList{
+        width: 1160px;
+        .firstNav{
+            overflow: hidden;
+            height: 60px;
+            position: absolute;
+            left: 60px;
+            top: 120px;
+            li{
+                float: left;
+                width: 232px;
+                text-align: center;
+                line-height: 60px;
+                font-size: 26px;
+                font-weight: bold;
+                position: relative;
+                &.hasBeenSelected{
+                    div{
+                        width: 162px;
+                        height: 60px;
+                        border-bottom: 4px solid #f9622a;
+                        position: absolute;
+                        top: -8px;
+                        left: 34px;
+                    }
+                }
+                &.active{
+                    div{
+                        width: 221px;
+                        height: 60px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border: 5px solid #0ff;
+                        border-radius: 2px;
+                        box-shadow: 0 0 3px 0 #0ff inset;
+                    }
+                }
+            }
+        }
+        .classes{
+            width: 1160px;
+            height: 365px;
+            padding-top: 27px;
+            overflow: hidden;
+            // margin-top: 106px;
+            position: absolute;
+            left: 60px;
+            top: 191px;
+            li{
+                float: left;
+                width: 522px;
+                height: 72px;
+                font-size: 26px;
+                line-height: 7px;
+                position: relative;
+                &:nth-child(odd){
+                    margin-right: 116px;
+                }
+                .character{
+                    width: 505px;
+                    height: 30px;
+                    padding-left: 30px;
+                    // padding-top: 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .bottCor{
+                    position: absolute;
+                    top: 47px;
+                    left: 13px;
+                    width: 496px;
+                    border-bottom: 1px solid #8884B5;
+                }
+                &.active{
+                    .border{
+                        position: absolute;
+                        left: 5px;
+                        top: -26px;
+                        width: 507px;
+                        height: 73px;
+                        border: 5px solid #0ff;
+                        border-radius: 2px;
+                        box-shadow: 0 0 3px 0 #0ff inset;
+                    }
+                }
+            }
+        }
+        .footer{
+            position: absolute;
+            font-family: "微软雅黑";
+            right: 80px;
+            bottom: 100px;
+            width: 361px;
+            height: 47px;
+            overflow: hidden;
+            li{
+                float: left;
+                font-size: 20px;
+                text-align: center;
+                line-height: 47px;
+                margin-left: 13px;
+                &.prevPage,&.nextPage{
+                    width: 113px;
+                    height: 47px;
+                    position: relative;
+                    .pages{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 113px;
+                        height: 47px;
+                        z-index: 1;
+                    }
+                    .bgOpa{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 113px;
+                        height: 47px;
+                        background: #000;
+                        opacity: .2;
+                    }
+                    .bgFocus{
+                        &.selectAble{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 113px;
+                            height: 47px;
+                            background: #6A9DEC;
+                            color: #fff;
+                            box-shadow: 0px 4px 7px -2px rgba(0,0,0,0.2);
+                        }
+                    }
+                    .border{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 110px;
+                        height: 47px;
+                        box-shadow: 0 0 10px #0ff;
+                        border: 3px solid #0ff;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// 获奖课程
+.mainAward{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 26px;
+    .navBgOne{
+        position: absolute;
+        left: 60px;
+        top: 120px;
+        width: 1160px;
+        height: 60px;
+        background: #000;
+        opacity: .2;
+        z-index: -1;
+    }
+    .navBgTwo{
+        position: absolute;
+        left: 60px;
+        top: 190px;
+        width: 1160px;
+        height: 60px;
+        background: #000;
+        opacity: .2;
+        z-index: -1;
+    }
+    .navigate{
+        width: 1160px;
+        .firstNav{
+            overflow: hidden;
+            height: 60px;
+            position: absolute;
+            left: 60px;
+            top: 120px;
+            li{
+                float: left;
+                width: 580px;
+                text-align: center;
+                line-height: 60px;
+                font-size: 26px;
+                font-weight: bold;
+                position: relative;
+                &.hasBeenSelected{
+                    div{
+                        width: 406px;
+                        height: 60px;
+                        border-bottom: 4px solid #f9622a;
+                        position: absolute;
+                        top: -8px;
+                        left: 86px;
+                    }
+                }
+                &.active{
+                    div{
+                        width: 570px;
+                        height: 60px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border: 5px solid #0ff;
+                        border-radius: 2px;
+                        box-shadow: 0 0 3px 0 #0ff inset;
+                    }
+                }
+            }
+        }
+        .secondNav{
+            overflow: hidden;
+            height: 60px;
+            position: absolute;
+            left: 60px;
+            top: 190px;
+            li{
+                float: left;
+                width: 386.6px;
+                text-align: center;
+                line-height: 60px;
+                font-size: 26px;
+                font-weight: bold;
+                position: relative;
+                &.hasBeenSelected{
+                    div{
+                        width: 270px;
+                        height: 60px;
+                        border-bottom: 4px solid #f9622a;
+                        position: absolute;
+                        top: -8px;
+                        left: 62px;
+                    }
+                }
+                &.active{
+                    div{
+                        width: 377px;
+                        height: 60px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border: 5px solid #0ff;
+                        border-radius: 2px;
+                        box-shadow: 0 0 3px 0 #0ff inset;
+                    }
+                }
+            }
+        }
+        .classes{
+            width: 1160px;
+            height: 290px;
+            padding-top: 18px;
+            overflow: hidden;
+            // margin-top: 106px;
+            position: absolute;
+            left: 60px;
+            top: 270px;
+            li{
+                float: left;
+                width: 522px;
+                height: 56px;
+                font-size: 26px;
+                line-height: 27px;
+                position: relative;
+                &:nth-child(odd){
+                    margin-right: 116px;
+                }
+                .character{
+                    width: 505px;
+                    padding-left: 30px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .bottCor{
+                    position: absolute;
+                    top: 40px;
+                    left: 13px;
+                    width: 496px;
+                    border-bottom: 1px solid #8884B5;
+                }
+                &.active{
+                    .border{
+                        position: absolute;
+                        left: 5px;
+                        top: -18px;
+                        width: 507px;
+                        height: 58px;
+                        border: 5px solid #0ff;
+                        border-radius: 2px;
+                        box-shadow: 0 0 3px 0 #0ff inset;
+                    }
+                }
+            }
+        }
+        .footer{
+            position: absolute;
+            font-family: "微软雅黑";
+            right: 80px;
+            bottom: 100px;
+            width: 361px;
+            height: 47px;
+            overflow: hidden;
+            li{
+                float: left;
+                font-size: 20px;
+                text-align: center;
+                line-height: 47px;
+                margin-left: 13px;
+                &.prevPage,&.nextPage{
+                    width: 113px;
+                    height: 47px;
+                    position: relative;
+                    .pages{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 113px;
+                        height: 47px;
+                        z-index: 1;
+                    }
+                    .bgOpa{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 113px;
+                        height: 47px;
+                        background: #000;
+                        opacity: .2;
+                    }
+                    .bgFocus{
+                        &.selectAble{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 113px;
+                            height: 47px;
+                            background: #6A9DEC;
+                            color: #fff;
+                            box-shadow: 0px 4px 7px -2px rgba(0,0,0,0.2);
+                        }
+                    }
+                    .border{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 110px;
+                        height: 47px;
+                        box-shadow: 0 0 10px #0ff;
+                        border: 3px solid #0ff;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// 名师名校二级页列表
+.mainProjectST{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 26px;
+    .navigate{
+        width: 1160px;
+        .classes{
+            width: 1160px;
+            height: 450px;
+            padding-top: 35px;
+            overflow: hidden;
+            // margin-top: 106px;
+            position: absolute;
+            left: 60px;
+            top: 107px;
+            li{
+                float: left;
+                width: 522px;
+                height: 88px;
+                font-size: 26px;
+                line-height: 21px;
+                position: relative;
+                &:nth-child(odd){
+                    margin-right: 116px;
+                }
+                .character{
+                    width: 505px;
+                    height: 30px;
+                    padding-left: 30px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .bottCor{
+                    position: absolute;
+                    top: 55px;
+                    left: 13px;
+                    width: 496px;
+                    border-bottom: 1px solid #8884B5;
+                }
+                &.active{
+                    .border{
+                        position: absolute;
+                        left: 5px;
+                        top: -34px;
+                        width: 507px;
+                        height: 89px;
+                        border: 5px solid #0ff;
+                        border-radius: 2px;
+                        box-shadow: 0 0 3px 0 #0ff inset;
+                    }
+                }
+            }
+        }
+        .footer{
+            position: absolute;
+            font-family: "微软雅黑";
+            right: 80px;
+            bottom: 100px;
+            width: 361px;
+            height: 47px;
+            overflow: hidden;
+            li{
+                float: left;
+                font-size: 20px;
+                text-align: center;
+                line-height: 47px;
+                margin-left: 13px;
+                &.prevPage,&.nextPage{
+                    width: 113px;
+                    height: 47px;
+                    position: relative;
+                    .pages{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 113px;
+                        height: 47px;
+                        z-index: 1;
+                    }
+                    .bgOpa{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 113px;
+                        height: 47px;
+                        background: #000;
+                        opacity: .2;
+                    }
+                    .bgFocus{
+                        &.selectAble{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 113px;
+                            height: 47px;
+                            background: #6A9DEC;
+                            color: #fff;
+                            box-shadow: 0px 4px 7px -2px rgba(0,0,0,0.2);
+                        }
+                    }
+                    .border{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 110px;
+                        height: 47px;
+                        box-shadow: 0 0 10px #0ff;
+                        border: 3px solid #0ff;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// 小初高二级页列表
+.mainCourseL{
+    // 小初高列表样式
+    .titleNameLf,.titleNameRt{
+        li{
+            width: 555px;
+            height: 67.7px;
+            font-size: 26px;
+            color: #fff;
+            line-height: 65px;
+            padding-left: 30px;
+            margin-bottom: 8px;
+            margin-top: 6px;
+            position: relative;
+            box-sizing: border-box;
+            .liBg{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 539px;
+                height: 66.7px;
+                background: #000;
+                opacity: .2;
+                z-index: -1;
+            }
+            &.active{
+                transform: scale(1.06);
+                .bgfocus{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 539px;
+                    height: 66.7px;
+                    z-index: -1;
+                    background: #35A3FF;
+                }
+                .border{
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 535px;
+                    height: 66px;
+                    border: 3px solid #0ff;
+                    border-radius: 2px;
+                    box-shadow: 0 0 3px 0 #0ff;
+                }
+            }
+            .character{
+                width: 505px;
+                display: inline-block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    .listLeft{
+        width: 540px;
+        height: 440px;
+        position: absolute;
+        left: 60px;
+        top: 108px;
+        .titleLeft{
+            height: 65px;
+            font-size: 30.6px;
+            font-weight: bold;
+            color: #58E2FE;
+            padding-left: 30px;
+            text-shadow: 0px 1px 6px #18343f;
+        }
+    }
+    .listRight{
+        width: 540px;
+        height: 440px;
+        position: absolute;
+        left: 680px;
+        top: 108px;
+        .titleRight{
+            height: 65px;
+            font-size: 30.6px;
+            font-weight: bold;
+            color: #58E2FE;
+            padding-left: 30px;
+            text-shadow: 0px 1px 6px #18343f;
+        }
+    }
+    // 课堂冲刺列表样式
+    .navList{
+        width: 1160px;
+        .classes{
+            width: 1160px;
+            height: 450px;
+            padding-top: 35px;
+            overflow: hidden;
+            position: absolute;
+            left: 60px;
+            top: 107px;
+            li{
+                float: left;
+                width: 522px;
+                height: 88px;
+                font-size: 26px;
+                line-height: 21px;
+                position: relative;
+                &:nth-child(odd){
+                    margin-right: 116px;
+                }
+                .character{
+                    width: 505px;
+                    padding-left: 30px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .bottCor{
+                    position: absolute;
+                    top: 55px;
+                    left: 13px;
+                    width: 496px;
+                    border-bottom: 1px solid #8884B5;
+                }
+                &.active{
+                    .border{
+                        position: absolute;
+                        left: 5px;
+                        top: -34px;
+                        width: 507px;
+                        height: 89px;
+                        border: 5px solid #0ff;
+                        border-radius: 2px;
+                        box-shadow: 0 0 3px 0 #0ff inset;
+                    }
+                }
+            }
+        }
+    }
+    // 通用上一页下一页
+    .footer{
+        position: absolute;
+        font-family: "微软雅黑";
+        right: 80px;
+        bottom: 100px;
+        width: 361px;
+        height: 47px;
+        overflow: hidden;
+        li{
+            float: left;
+            font-size: 20px;
+            text-align: center;
+            line-height: 47px;
+            margin-left: 13px;
+            &.prevPage,&.nextPage{
+                width: 113px;
+                height: 47px;
+                position: relative;
+                .pages{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 113px;
+                    height: 47px;
+                    z-index: 1;
+                }
+                .bgOpa{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 113px;
+                    height: 47px;
+                    background: #000;
+                    opacity: .2;
+                }
+                .bgFocus{
+                    &.selectAble{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 113px;
+                        height: 47px;
+                        background: #6A9DEC;
+                        color: #fff;
+                        box-shadow: 0px 4px 7px -2px rgba(0,0,0,0.2);
+                    }
+                }
+                .border{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 110px;
+                    height: 47px;
+                    box-shadow: 0 0 10px #0ff;
+                    border: 3px solid #0ff;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+// 小初高二级页列表弹窗
+.dialogV{
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    .dialogVideo{
+        display: none;
+        .dialogBg{
+            width: 1280px;
+            height: 720px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #000;
+            opacity: 0.5;
+            z-index: 1;
+        }
+        .dialogContent{
+            width: 573px;
+            height: 413px;
+            background: url(../../images/edu/swiper/school/courseSelect.png);
+            position: absolute;
+            left: 353px;
+            top: 153px;
+            z-index: 2;
+            overflow: hidden;
+            #vessel{
+                width: 573px;
+                height: 306px;
+                overflow: hidden;
+                position: absolute;
+                top: 85px;
+                padding-left: 47px;
+                // padding-top: 5px;
+                #position{
+                    width: 573px;
+                    height: 306px;
+                    position: relative;
+                    overflow: hidden;
+                    #videoContent{
+                        width: 479px;
+                        // height: 311px;
+                        height: 306px;
+                        position: absolute;
+                        top: 0px;
+                        padding-top: 7px;
+                        // overflow: hidden;
+                        li{
+                            width: 479px;
+                            height: 69px;
+                            margin-bottom: 8px;
+                            border-radius: 2px;
+                            box-sizing: border-box;
+                            position: relative;
+                            .liBg{
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 479px;
+                                height: 69px;
+                                background: #d9e7fa;
+                                z-index: -1;
+                            }
+                            &.dialogActive{
+                                // transform: scale(1.1);
+                                .bgfocus{
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 479px;
+                                    height: 69px;
+                                    z-index: -1;
+                                    border-radius: 2px;
+                                    background: #72a7fe;
+                                }
+                                .border{
+                                    position: absolute;
+                                    left: 0;
+                                    top: -5px;
+                                    width: 471px;
+                                    height: 76px;
+                                    border-radius: 2px;
+                                    border: 5px solid #0ff;
+                                    box-shadow: 0 0 3px 0 #0ff;
+                                }
+                                .videoTitle,.videoTeacher,.videoSchool{
+                                    color: #fff;
+                                }
+                            }
+                            .videoTitle{
+                                color: #464646;
+                                font-size: 27px;
+                                font-weight: bold;
+                                padding-left: 30px;
+                                padding-top: 7px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+                            .videoTle{
+                                padding-top: 4px;
+                            }
+                            .videoTeacher,.videoSchool{
+                                color: #8e949e;
+                                font-size: 20px;
+                                margin-left: 15px;
+                                display: inline-block;
+                                width: 220px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                #sliderWrap{
+                    position: absolute;
+                    top: 2px;
+                    left: 560px;
+                    width: 5px;
+                    height: 303px;
+                    background: #BFBFBF;
+                    #slider{
+                        position: absolute;
+                        left: 0px;
+                        width: 5px;
+                        background: #72a7fe;
+                    }
+                }
+                #sliderWrap.display{
+                    display: none;
+                }
+            }
+        }
+    }
+    .dialogVideo.display{
+        display: block;
+    }
+}
+.dialogN{
+    .dialogNone{
+        display: none;
+        .dialogBg{
+            width: 1280px;
+            height: 720px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #000;
+            opacity: 0.5;
+            z-index: 1;
+        }
+        .noneContent{
+            width: 573px;
+            height: 381px;
+            background: url(../../images/edu/swiper/school/warning.png);
+            position: absolute;
+            left: 353px;
+            top: 153px;
+            z-index: 2;
+            p{
+                width: 342px;
+                color: #464646;
+                font-size: 31px;
+                font-weight: bold;
+                margin: 165px auto 30px;
+            }
+            div{
+                width: 223px;
+                height: 67px;
+                margin: 0 auto;
+                background: url(../../images/edu/swiper/school/notarize.png);
+            }
+        }
+    }
+    .dialogNone.display{
+        display: block;
+    }
+}
+// 观看记录
+.mainHistoryR{
+    margin-left: 60px;
+    margin-right: 60px;
+    // margin-top: 10px;
+    .classes{
+        width: 1160px;
+        height: 500px;
+        overflow: hidden;
+        li{
+            float: left;
+            width: 540px;
+            height: 92px;
+            font-size: 26px;
+            color: #fff;
+            line-height: 58px;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            position: relative;
+            box-sizing: border-box;
+            &:nth-child(odd){
+                margin-right: 50px;
+            }
+            .titleSmall{
+                font-size: 24px;
+                margin-top: -3px;
+                span{
+                    color: #969EB5;
+                }
+            }
+            .titleBig{
+                margin-top: -25px;
+                padding-top: 7px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .noRecord{
+                color: #5B6392;
+                line-height: 87px;
+            }
+            .liBg{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 540px;
+                height: 92px;
+                background: #000;
+                opacity: .2;
+                z-index: -1;
+            }
+            &.active{
+                .titleSmall{
+                    span{
+                        color: #9AD1FF;
+                    }
+                }
+                .bgfocus{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 540px;
+                    height: 92px;
+                    z-index: -1;
+                    background: #35A3FF;
+                }
+                .border{
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 536px;
+                    height: 92px;
+                    border: 3px solid #0ff;
+                    border-radius: 2px;
+                    box-shadow: 0 0 3px 0 #0ff;
+                }
+            }
+        }
+    }
+}
+// 名师名校swiper轮播页
+.mainSchoolT{
+    width: 1280px;
+    height: 547px;
+    margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+    .swiperWrapper{
+        width: 10000px;
+        height: 490px;
+        position: absolute;
+        top: 0px;
+        left: -400px;
+        li{
+            float: left;
+            width: 680px;
+            height: 363px;
+            margin-top: 50px;
+            opacity: .7;
+            position: relative;
+            img{
+                width: 680px;
+                height: 363px;
+            }
+            &.active{
+                // transform: scale(1.1);
+                .border{
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 680px;
+                    height: 368px;
+                    border: 5px solid #0ff;
+                    border-radius: 2px;
+                    box-shadow: 0 0 3px 0 #0ff;
+                }
+            }
+            &.site{
+                opacity: 1;
+                padding-top: 5px;
+                padding-left: 5px;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 17px;
+            }
+        }
+    }
+    .swiperPagination{
+        overflow: hidden;
+        height: 10px;
+        position: absolute;
+        top: 460px;
+        left: 596px;
+        div{
+            width: 10px;
+            height: 10px;
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+            &.circleNormal{
+                background: url("../../images/edu/swiper/school/circle_normal.png") no-repeat;
+            }
+            &.circleSelected{
+                background: url("../../images/edu/swiper/school/circle_selected.png") no-repeat;
+            }
+        }
+    }
+}
+// 小初高swiper轮播页
+.mainYMH{
+    width: 1280px;
+    height: 547px;
+    overflow: hidden;
+    position: relative;
+    .navigate{
+        // width: 1128px; // 小学
+        // width: 896px;  // 初中
+        // width: 664px;  // 高中
+        height: 60px;
+        overflow: hidden;
+        margin: 0 auto;
+        li{
+            float: left;
+            width: 200px;
+            height: 60px;
+            line-height: 62px;
+            text-align: center;
+            margin-right: 32px;
+            font-size: 27px;
+            font-family: "微软雅黑";
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px #000;
+            position: relative;
+            &:last-child{
+                margin-right: 0;
+            }
+            .liBg{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 200px;
+                height: 60px;
+                background: #7A7CAD;
+                z-index: -1;
+            }
+            .bgfocus{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 200px;
+                height: 60px;
+                z-index: -1;
+                background: #35A4FF;
+            }
+            &.active{
+                // transform: scale(1.06);
+                .border{
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 190px;
+                    height: 60px;
+                    border: 5px solid #0ff;
+                    border-radius: 2px;
+                    box-shadow: 0 0 3px 0 #0ff;
+                }
+            }
+        }
+    }
+    .swiperContent{
+        width: 10000px;
+        height: 490px;
+        position: absolute;
+        top: 0; 
+        .swiperWrapper{
+            width: 10000px;
+            height: 490px;
+            position: absolute;
+            top: 0px;
+            left: -270px;
+            li{
+                float: left;
+                width: 580px;
+                height: 373px;
+                margin-top: 124px;
+                opacity: .7;
+                position: relative;
+                img{
+                    width: 580px;
+                    height: 373px;
+                }
+                &.active{
+                    // transform: scale(1.1);
+                    .border{
+                        position: absolute;
+                        left: -5px;
+                        top: 0px;
+                        width: 580px;
+                        height: 378px;
+                        border: 5px solid #0ff;
+                        border-radius: 2px;
+                        box-shadow: 0 0 3px 0 #0ff;
+                    }
+                }
+                &.site{
+                    opacity: 1;
+                    margin-left: 40px;
+                    margin-right: 40px;
+                    margin-top: 86px;
+                }
+                &.defaultSty{
+                    margin-left: 40px;
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+}
