@@ -203,8 +203,8 @@ function leftKeyDown () {
     } else {
         var $num = $(".active").attr("data-num");
         if ( $("#container01").hasClass("active") ) {
-            // var dataNum = $("#container01").attr("data-num");
             var dataNum = $num
+            // var dataNum = $("#container01").attr("data-num");
             $("#container01").elements[0].className = "";
             if ( dataNum == 0 ) {
                 $("#left01").elements[0].className = "active";
@@ -227,7 +227,7 @@ function leftKeyDown () {
         } else 
         if ( $("#right03").hasClass("active") ) {
             num = 5
-            $("#container01").attr("data-num",$num);
+            // $("#container01").attr("data-num",$num);
             $("#right03").elements[0].className = "";
             $("#container01").elements[0].className = "active";
         }else
