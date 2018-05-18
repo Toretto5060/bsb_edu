@@ -136,8 +136,8 @@ function topKeyDown () {
 function downKeyDown () {
     if(document.getElementById('alert').style.display == "block") {
         return false;
-    }
-    var $num = $(".active").attr("data-num");
+    }else
+    // var $num = $(".active").attr("data-num");
     if ( $("#left01").hasClass("active") ) {
         $("#left01").elements[0].className = "";
         $("#left02").elements[0].className = "active";
