@@ -4,7 +4,6 @@ window.onload = function () {
     }
     var params_arr = location.href.split('?');
     var active_num = Number(params_arr[1].split('=')[1]);
-
     switch ( active_num ) {
         case 10:
             $('#left01').elements[0].className = "active";

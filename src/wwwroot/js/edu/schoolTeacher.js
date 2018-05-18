@@ -13,7 +13,6 @@ window.onload = function () {
         break;
     }
 }
-
 function ajaxGetInformation(address){
     ajax({
         type: "get",
